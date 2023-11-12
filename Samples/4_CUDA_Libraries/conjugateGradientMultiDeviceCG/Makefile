@@ -353,7 +353,16 @@ GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
 endif
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += -ewp -maxrregcount=64 --std=c++11
+else
 ALL_CCFLAGS += -ewp -maxrregcount=64 --std=c++11 --threads 0
+endif
+
+ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
+$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+SAMPLE_ENABLED := 0
+endif
 
 LIBRARIES += -lcudadevrt
 

@@ -3818,7 +3818,7 @@ typedef void (APIENTRYP PFNGLGETVERTEXATTRIBPOINTERVPROC)(GLuint index, GLenum p
 typedef GLboolean(APIENTRYP PFNGLISPROGRAMPROC)(GLuint program);
 typedef GLboolean(APIENTRYP PFNGLISSHADERPROC)(GLuint shader);
 typedef void (APIENTRYP PFNGLLINKPROGRAMPROC)(GLuint program);
-typedef void (APIENTRYP PFNGLSHADERSOURCEPROC)(GLuint shader, GLsizei count, const GLchar **string, const GLint *length);
+//typedef void (APIENTRYP PFNGLSHADERSOURCEPROC)(GLuint shader, GLsizei count, const GLchar **string, const GLint *length);
 typedef void (APIENTRYP PFNGLUSEPROGRAMPROC)(GLuint program);
 typedef void (APIENTRYP PFNGLUNIFORM1FPROC)(GLint location, GLfloat v0);
 typedef void (APIENTRYP PFNGLUNIFORM2FPROC)(GLint location, GLfloat v0, GLfloat v1);

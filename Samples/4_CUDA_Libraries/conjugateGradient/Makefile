@@ -312,12 +312,21 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
+$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+SAMPLE_ENABLED := 0
+endif
+
 LIBRARIES += -lcublas_static -lcublasLt_static -lcusparse_static -lculibos
 
 ################################################################################
 
 # Target rules
+ifeq ($(SAMPLE_ENABLED),0)
+all:
+else
 all: build
+endif
 
 build: conjugateGradient
 

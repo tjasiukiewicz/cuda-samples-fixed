@@ -328,7 +328,11 @@ GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
 endif
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += -Xcompiler -fpermissive --std=c++11
+else
 ALL_CCFLAGS += -Xcompiler -fpermissive --threads 0 --std=c++11
+endif
 
 LIBRARIES += -lcurand
 

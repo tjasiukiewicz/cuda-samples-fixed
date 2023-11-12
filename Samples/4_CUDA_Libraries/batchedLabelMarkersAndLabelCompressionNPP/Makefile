@@ -326,6 +326,11 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
+$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+SAMPLE_ENABLED := 0
+endif
+
 LIBRARIES += -lnppisu_static -lnppif_static -lnppc_static -lculibos
 
 ifeq ($(SAMPLE_ENABLED),0)

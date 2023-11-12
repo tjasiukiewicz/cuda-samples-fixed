@@ -347,7 +347,11 @@ GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
 endif
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += -dc -std=c++11
+else
 ALL_CCFLAGS += -dc -std=c++11 --threads 0
+endif
 
 LIBRARIES += -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -lcufft_static -lculibos
 

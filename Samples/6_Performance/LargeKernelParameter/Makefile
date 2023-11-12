@@ -309,7 +309,7 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
-feq ($(shell test $(CUDA_VERSION) \< 12.1; echo $$?), 0)
+ifeq ($(shell test $(CUDA_VERSION) \< 12.1; echo $$?), 0)
 $(info >>> WARNING - unsupported below CUDA Toolkit 12.1. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif

@@ -341,7 +341,11 @@ GENCODE_FLAGS += -gencode arch=compute_$(HIGHEST_SM),code=compute_$(HIGHEST_SM)
 endif
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += -DUSE_CUDAINTEROP -DGRAPHICS_SETUP_EGL -DUSE_GLES -I/usr/include/libdrm -I/usr/include/drm --std=c++11
+else
 ALL_CCFLAGS += -DUSE_CUDAINTEROP -DGRAPHICS_SETUP_EGL -DUSE_GLES -I/usr/include/libdrm -I/usr/include/drm --threads 0 --std=c++11
+endif
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"
