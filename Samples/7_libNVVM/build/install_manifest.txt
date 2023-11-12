@@ -1,0 +1,7 @@
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/dsl
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/dsl-gpu64.ll
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/simple
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/simple-gpu64.ll
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/ptxgen
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/uvmlite
+/home/tojas/cuda-samples/Samples/7_libNVVM/install/bin/uvmlite64.ll

@@ -163,6 +163,9 @@ endif
 HOST_COMPILER ?= g++
 NVCC          := $(CUDA_PATH)/bin/nvcc -ccbin $(HOST_COMPILER)
 
+# CUDA Version
+CUDA_VERSION := $(shell nvcc --version | awk -F'[_.]' '/Build cuda/{print$$2"."$$3;}')
+
 # internal flags
 NVCCFLAGS   := -m${TARGET_SIZE}
 CCFLAGS     :=
@@ -413,7 +416,11 @@ else
   endif
 endif
 
-ALL_CCFLAGS += --std=c++11 --threads 0
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += --std=c++11
+else
+ALL_CCFLAGS += --threads 0 --std=c++11
+endif
 
 LIBRARIES += -lnvscibuf -lnvscisync
 

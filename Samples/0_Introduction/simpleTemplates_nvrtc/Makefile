@@ -163,6 +163,9 @@ endif
 HOST_COMPILER ?= g++
 NVCC          := $(CUDA_PATH)/bin/nvcc -ccbin $(HOST_COMPILER)
 
+# CUDA Version
+CUDA_VERSION := $(shell nvcc --version | awk -F'[_.]' '/Build cuda/{print$$2"."$$3;}')
+
 # internal flags
 NVCCFLAGS   := -m${TARGET_SIZE}
 CCFLAGS     :=
@@ -352,7 +355,16 @@ else
   endif
 endif
 
+ifeq ($(shell test $(CUDA_VERSION) \< 11.3; echo $$?), 0)
+ALL_CCFLAGS += --std=c++11
+else
 ALL_CCFLAGS += --threads 0 --std=c++11
+endif
+
+ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
+$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+SAMPLE_ENABLED := 0
+endif
 
 INCLUDES += -I$(CUDA_PATH)/include
 
