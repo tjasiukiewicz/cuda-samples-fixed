@@ -375,7 +375,7 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
-LIBRARIES += -lcudart_static
+LIBRARIES += -lcudart -lrt
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"

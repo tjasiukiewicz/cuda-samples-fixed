@@ -312,7 +312,7 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
-LIBRARIES += -lcurand_static -lculibos
+LIBRARIES += -lcurand -lculibos -ldl
 
 ################################################################################
 

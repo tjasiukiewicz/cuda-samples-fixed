@@ -313,7 +313,7 @@ else
 ALL_CCFLAGS += --threads 0 --std=c++11
 endif
 
-LIBRARIES += -lcurand
+LIBRARIES += -lcurand -lpthread
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"

@@ -353,7 +353,7 @@ else
 ALL_CCFLAGS += -dc -std=c++11 --threads 0
 endif
 
-LIBRARIES += -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -lcufft_static -lculibos
+LIBRARIES += -L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -lcufft -lculibos -ldl -lpthread
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"
