@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/uvmlite.dir/uvmlite.c.o"
-  "CMakeFiles/uvmlite.dir/uvmlite.c.o.d"
   "uvmlite"
   "uvmlite.pdb"
 )

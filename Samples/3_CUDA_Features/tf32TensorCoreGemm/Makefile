@@ -355,13 +355,13 @@ endif
 
 ALL_CCFLAGS += --std=c++11 --maxrregcount=128 --threads 0
 
-ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
-$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+ifeq ($(shell test $(CUDA_VERSION) \< 11.4; echo $$?), 0)
+$(info >>> WARNING - tf32TensorCoreGemm unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif
 
 ifeq ($(shell test $(SMS) \< 70; echo $$?), 0)
-$(info >>> WARNING - unsupported below SMS=70. Waiving the sample <<<)
+$(info >>> WARNING - tf32TensorCoreGemm unsupported below SMS=70. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif
 

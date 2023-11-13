@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ptxgen.dir/ptxgen.c.o"
-  "CMakeFiles/ptxgen.dir/ptxgen.c.o.d"
   "ptxgen"
   "ptxgen.pdb"
 )

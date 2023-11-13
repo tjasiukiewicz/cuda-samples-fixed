@@ -1,9 +1,17 @@
-test-cuda-shared-memory-shared_memory 1 0.0163481
-test-cuda-shared-memory-extern_shared_memory 1 0.0175079
-device-side-launch 1 0.229728
-simple 1 0.127428
-test-syscalls-malloc-free 1 0.0136224
-test-syscalls-vprintf 1 0.012712
-ptxgenTest 1 0.154305
-uvmlite 1 0.117535
+test-cuda-shared-memory-shared_memory 0 0
+test-cuda-shared-memory-extern_shared_memory 0 0
+device-side-launch 0 0
+simple 0 0
+test-syscalls-malloc-free 0 0
+test-syscalls-vprintf 0 0
+ptxgenTest 0 0
+uvmlite 0 0
 ---
+ptxgenTest
+test-cuda-shared-memory-shared_memory
+test-cuda-shared-memory-extern_shared_memory
+device-side-launch
+simple
+test-syscalls-malloc-free
+test-syscalls-vprintf
+uvmlite

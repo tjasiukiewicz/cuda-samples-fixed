@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dsl.dir/dsl.c.o"
-  "CMakeFiles/dsl.dir/dsl.c.o.d"
   "dsl"
   "dsl.pdb"
 )

@@ -20,7 +20,7 @@ string.h
 sys/stat.h
 -
 
-/usr/local/cuda-10.2/nvvm/include/nvvm.h
+/usr/local/cuda/nvvm/include/nvvm.h
 stdlib.h
 -
 

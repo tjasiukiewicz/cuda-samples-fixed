@@ -325,13 +325,13 @@ else
 ALL_CCFLAGS +=  -maxrregcount=255 --threads 0 --std=c++11
 endif
 
-ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
-$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+ifeq ($(shell test $(CUDA_VERSION) \< 11.4; echo $$?), 0)
+$(info >>> WARNING - immaTensorCoreGemm unsupported below CUDA Toolkit 11.4. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif
 
 ifeq ($(shell test $(SMS) \< 72; echo $$?), 0)
-$(info >>> WARNING - unsupported below SMS=72. Waiving the sample <<<)
+$(info >>> WARNING - immaTensorCoreGemm unsupported below SMS=72. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif
 

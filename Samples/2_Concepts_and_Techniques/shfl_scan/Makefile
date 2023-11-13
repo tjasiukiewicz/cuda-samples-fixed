@@ -343,8 +343,8 @@ endif
 
 ALL_CCFLAGS += --std=c++11 -O3 --threads 0
 
-ifeq ($(shell test $(CUDA_VERSION) \< 11.6; echo $$?), 0)
-$(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<)
+ifeq ($(shell test $(CUDA_VERSION) \< 11.4; echo $$?), 0)
+$(info >>> WARNING - shfl_scan unsupported below CUDA Toolkit 11.4. Waiving the sample <<<)
 SAMPLE_ENABLED := 0
 endif
 
