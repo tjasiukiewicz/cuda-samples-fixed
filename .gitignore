@@ -1,3 +1,4 @@
 .vscode/*
 bin/*
 Samples/7_libNVVM/build/*
+Samples/7_libNVVM/install/bin/*

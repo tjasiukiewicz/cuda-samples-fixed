@@ -1,8 +1,0 @@
-1:test-cuda-shared-memory-shared_memory
-2:test-cuda-shared-memory-extern_shared_memory
-3:device-side-launch
-4:simple
-5:test-syscalls-malloc-free
-6:test-syscalls-vprintf
-7:ptxgenTest
-8:uvmlite
