@@ -331,7 +331,7 @@ $(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<
 SAMPLE_ENABLED := 0
 endif
 
-LIBRARIES += -lnppisu_static -lnppif_static -lnppc_static -lculibos
+LIBRARIES += -lnppisu -lnppif -lnppc -lculibos
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"

@@ -317,7 +317,7 @@ $(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<
 SAMPLE_ENABLED := 0
 endif
 
-LIBRARIES += -lcublas_static -lcublasLt_static -lcusparse_static -lculibos
+LIBRARIES += -lcublas -lcublasLt -lcusparse -lculibos
 
 ################################################################################
 

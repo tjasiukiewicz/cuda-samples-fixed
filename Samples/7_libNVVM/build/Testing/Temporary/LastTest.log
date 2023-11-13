@@ -1,0 +1,141 @@
+Start testing: Nov 13 01:40 CET
+----------------------------------------------------------
+7/8 Testing: ptxgenTest
+7/8 Test: ptxgenTest
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/ptxgen/ptxgen" "/home/tojas/cuda-samples/Samples/7_libNVVM/ptxgen/test.ll"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"ptxgenTest" start time: Nov 13 01:40 CET
+Output:
+----------------------------------------------------------
+Failed to verify the compilation unit
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"ptxgenTest" end time: Nov 13 01:40 CET
+"ptxgenTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+Failed test dependencies: ptxgenTest
+1/8 Testing: test-cuda-shared-memory-shared_memory
+1/8 Test: test-cuda-shared-memory-shared_memory
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/ptxgen/ptxgen" "/home/tojas/cuda-samples/Samples/7_libNVVM/cuda-shared-memory/shared_memory.ll"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"test-cuda-shared-memory-shared_memory" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test-cuda-shared-memory-shared_memory" end time: Nov 13 01:40 CET
+"test-cuda-shared-memory-shared_memory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+Failed test dependencies: ptxgenTest
+2/8 Testing: test-cuda-shared-memory-extern_shared_memory
+2/8 Test: test-cuda-shared-memory-extern_shared_memory
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/ptxgen/ptxgen" "/home/tojas/cuda-samples/Samples/7_libNVVM/cuda-shared-memory/extern_shared_memory.ll"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"test-cuda-shared-memory-extern_shared_memory" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test-cuda-shared-memory-extern_shared_memory" end time: Nov 13 01:40 CET
+"test-cuda-shared-memory-extern_shared_memory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: device-side-launch
+3/8 Test: device-side-launch
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/device-side-launch/dsl"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"device-side-launch" start time: Nov 13 01:40 CET
+Output:
+----------------------------------------------------------
+nvvmCompileProgram: Failed
+dsl-gpu64.ll (63, 71): parse expected value token
+Using CUDA Device [0]: NVIDIA Tegra X1
+compute capability = 5.3
+NVVM IR ll file loaded
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Failed.
+"device-side-launch" end time: Nov 13 01:40 CET
+"device-side-launch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: simple
+4/8 Test: simple
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/simple/simple"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"simple" start time: Nov 13 01:40 CET
+Output:
+----------------------------------------------------------
+nvvmCompileProgram: Failed
+simple-gpu64.ll (46, 40): parse expected value token
+NVVM IR (.ll) file loaded
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"simple" end time: Nov 13 01:40 CET
+"simple" time elapsed: 00:00:00
+----------------------------------------------------------
+
+Failed test dependencies: ptxgenTest
+5/8 Testing: test-syscalls-malloc-free
+5/8 Test: test-syscalls-malloc-free
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/ptxgen/ptxgen" "/home/tojas/cuda-samples/Samples/7_libNVVM/syscalls/malloc-free.ll"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"test-syscalls-malloc-free" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test-syscalls-malloc-free" end time: Nov 13 01:40 CET
+"test-syscalls-malloc-free" time elapsed: 00:00:00
+----------------------------------------------------------
+
+Failed test dependencies: ptxgenTest
+6/8 Testing: test-syscalls-vprintf
+6/8 Test: test-syscalls-vprintf
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/ptxgen/ptxgen" "/home/tojas/cuda-samples/Samples/7_libNVVM/syscalls/vprintf.ll"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"test-syscalls-vprintf" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test-syscalls-vprintf" end time: Nov 13 01:40 CET
+"test-syscalls-vprintf" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: uvmlite
+8/8 Test: uvmlite
+Command: "/home/tojas/cuda-samples/Samples/7_libNVVM/build/uvmlite/uvmlite"
+Directory: /home/tojas/cuda-samples/Samples/7_libNVVM/build
+"uvmlite" start time: Nov 13 01:40 CET
+Output:
+----------------------------------------------------------
+nvvmCompileProgram: Failed
+uvmlite64.ll (58, 5): parse expected type
+Using CUDA Device [0]: NVIDIA Tegra X1
+compute capability = 5.3
+NVVM IR ll file loaded
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Failed.
+"uvmlite" end time: Nov 13 01:40 CET
+"uvmlite" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 13 01:40 CET

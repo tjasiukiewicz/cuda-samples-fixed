@@ -390,7 +390,7 @@ $(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<
 SAMPLE_ENABLED := 0
 endif
 
-LIBRARIES += -lcudart_static
+LIBRARIES += -lcudart
 
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"

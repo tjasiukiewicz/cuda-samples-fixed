@@ -313,8 +313,8 @@ ifeq ($(TARGET_OS),linux)
   INCLUDES  += -I$(VULKAN_HEADER)
  else
  LIBRARIES += -L$(VULKAN_SDK_LIB)
- LIBRARIES += `pkg-config --static --libs glfw3` -lvulkan
- INCLUDES  += `pkg-config --static --cflags glfw3` -I$(VULKAN_HEADER)
+ LIBRARIES += `pkg-config --libs glfw3` -lvulkan
+ INCLUDES  += `pkg-config --cflags glfw3` -I$(VULKAN_HEADER)
  endif
 endif
 
