@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dsl.dir/dsl.c.o"
-  "dsl.pdb"
+  "CMakeFiles/dsl.dir/dsl.c.o.d"
   "dsl"
+  "dsl.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

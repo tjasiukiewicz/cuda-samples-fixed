@@ -330,6 +330,11 @@ $(info >>> WARNING - unsupported below CUDA Toolkit 11.6. Waiving the sample <<<
 SAMPLE_ENABLED := 0
 endif
 
+ifeq ($(shell test $(SMS) \< 72; echo $$?), 0)
+$(info >>> WARNING - unsupported below SMS=72. Waiving the sample <<<)
+SAMPLE_ENABLED := 0
+endif
+
 ifeq ($(SAMPLE_ENABLED),0)
 EXEC ?= @echo "[@]"
 endif

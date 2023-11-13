@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/uvmlite.dir/uvmlite.c.o"
-  "uvmlite.pdb"
+  "CMakeFiles/uvmlite.dir/uvmlite.c.o.d"
   "uvmlite"
+  "uvmlite.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

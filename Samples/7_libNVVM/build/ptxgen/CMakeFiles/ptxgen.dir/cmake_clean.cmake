@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ptxgen.dir/ptxgen.c.o"
-  "ptxgen.pdb"
+  "CMakeFiles/ptxgen.dir/ptxgen.c.o.d"
   "ptxgen"
+  "ptxgen.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
